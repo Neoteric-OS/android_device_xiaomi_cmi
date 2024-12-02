@@ -79,4 +79,10 @@
     <string name="auto_hbm_summary">Enable peak luminance based on sunlight</string>
     <string name="hbm_mode_warning">Long time usage of High brightness mode may damage your display</string>
 
+    <!-- Thermal Profile -->
+    <string name="thermalprofile_title">Thermal profile</string>
+    <string name="thermalprofile_default">Default</string>
+    <string name="thermalprofile_game">Game</string>
+    <string name="thermalprofile_unknown">Unknown</string>
+
 </resources>

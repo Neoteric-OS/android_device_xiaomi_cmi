@@ -63,6 +63,20 @@ public final class FileUtils {
         return line;
     }
 
+    public static int readLineInt(String fileName) {
+        String line = readOneLine(fileName);
+        if (line == null) {
+            Log.e(TAG, "readLineInt: line is null for file " + fileName);
+            return 0; // or any default value that makes sense in your context
+        }
+        try {
+            return Integer.parseInt(line.replace("0x", ""));
+        } catch (NumberFormatException e) {
+            Log.e(TAG, "Could not convert string to int from file " + fileName, e);
+        }
+        return 0;
+    }
+
     /**
      * Writes the given value into the given file
      *
