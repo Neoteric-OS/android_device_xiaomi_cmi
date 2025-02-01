@@ -106,7 +106,7 @@ PRODUCT_COPY_FILES += \
 
 # Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.cmi \
+    android.hardware.biometrics.fingerprint-service.xiaomi \
     libudfpshandler
 
 PRODUCT_PACKAGES += \

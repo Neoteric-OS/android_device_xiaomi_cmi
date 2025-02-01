@@ -111,6 +111,11 @@ drm.service.enabled=true
 # Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Fingerprint
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=539|1907|99
+persist.vendor.fingerprint.sensor_modules=goodix_fod
+
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
