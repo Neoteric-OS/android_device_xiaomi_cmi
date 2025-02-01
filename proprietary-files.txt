@@ -709,6 +709,7 @@ vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # GPS
+vendor/app/CACertService/CACertService.apk
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
