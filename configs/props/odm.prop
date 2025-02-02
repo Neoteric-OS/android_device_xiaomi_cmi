@@ -1,2 +1,8 @@
+# Audio
+ro.vendor.audio.sdk.fluencetype=fluence
+
+# Bluetooth
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ldac
+
 # ODM
 ro.vendor.qti.va_odm.support=1

@@ -91,8 +91,6 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Audio
-system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
 vendor/lib/hw/audio.primary.kona.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/vndk/libxlog.so
