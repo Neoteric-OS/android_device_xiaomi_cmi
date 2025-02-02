@@ -158,6 +158,10 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service
 
 # Media
+PRODUCT_PACKAGES += \
+    libstagefright_softomx_plugin.vendor \
+    libstagefright_softomx.vendor
+
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona.xml \
