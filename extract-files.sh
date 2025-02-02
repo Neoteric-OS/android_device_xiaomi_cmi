@@ -55,6 +55,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/init/hw/init.batterysecret.rc|vendor/etc/init/hw/init.mi_thermald.rc)
+            sed -i 's/on charger/on property:init.svc.vendor.charger=running/' "${2}"
+            ;;
         vendor/etc/seccomp_policy/atfwd@2.0.policy)
             [ "$2" = "" ] && return 0
             grep -q 'gettid: ' "${2}" || echo 'gettid: 1' >> "${2}"

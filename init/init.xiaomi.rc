@@ -74,7 +74,7 @@ on boot
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
     chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
 
-on charger
+on property:init.svc.vendor.charger=running
     mkdir /mnt/vendor/persist
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
