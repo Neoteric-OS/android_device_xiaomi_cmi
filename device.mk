@@ -266,7 +266,8 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl-xiaomi \
     android.hardware.sensors@1.0-service \
-    libsensorndkbridge
+    libsensorndkbridge \
+    sensors.xiaomi
 
 # Shims
 PRODUCT_PACKAGES += \

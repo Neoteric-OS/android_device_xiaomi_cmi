@@ -62,6 +62,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q 'gettid: ' "${2}" || echo 'gettid: 1' >> "${2}"
             ;;
+        vendor/etc/sensors/hals.conf)
+            sed -i '$a sensors.xiaomi.so' "${2}"
+            ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/210080529A0A0094/210080521F2003D5/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
