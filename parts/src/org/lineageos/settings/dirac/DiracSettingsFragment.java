@@ -24,7 +24,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import com.android.settingslib.widget.MainSwitchPreference;
 import org.lineageos.settings.R;
 
@@ -41,7 +41,7 @@ public class DiracSettingsFragment extends PreferenceFragment
     private ListPreference mScenario;
     private ListPreference mHeadsetType;
     private ListPreference mPreset;
-    private SwitchPreference mHifi;
+    private SwitchPreferenceCompat mHifi;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
