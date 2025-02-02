@@ -1,0 +1,25 @@
+#
+# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2025 Neoteric OS
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+android_app {
+    name: "XiaomiParts",
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+    privileged: true,
+    platform_apis: true,
+    system_ext_specific: true,
+
+    static_libs: [
+        "SettingsLib",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
