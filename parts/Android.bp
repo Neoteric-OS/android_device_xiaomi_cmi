@@ -1,9 +1,9 @@
-#
-# Copyright (C) 2017-2020 The LineageOS Project
-# Copyright (C) 2025 Neoteric OS
-#
-# SPDX-License-Identifier: Apache-2.0
-#
+//
+// Copyright (C) 2017-2020 The LineageOS Project
+// Copyright (C) 2025 Neoteric OS
+//
+// SPDX-License-Identifier: Apache-2.0
+//
 
 android_app {
     name: "XiaomiParts",
@@ -17,10 +17,32 @@ android_app {
 
     static_libs: [
         "SettingsLib",
+        "androidx.core_core",
         "com.google.android.material_material",
+    ],
+
+    required: [
+        "privapp-permissions_com.xiaomi.dspvolume",
+        "config-com.xiaomi.dspvolume",
     ],
 
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+}
+
+prebuilt_etc {
+    name: "privapp-permissions_com.xiaomi.dspvolume",
+    sub_dir: "permissions",
+    src: "privapp-permissions_com.xiaomi.dspvolume.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "config-com.xiaomi.dspvolume",
+    sub_dir: "sysconfig",
+    src: "config-com.xiaomi.dspvolume.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
 }

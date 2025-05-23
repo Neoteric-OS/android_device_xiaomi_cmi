@@ -26,6 +26,7 @@ import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.utils.DisplayUtils;
 import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.pocketservice.PocketService;
+import org.lineageos.settings.volume.VolumeListenerService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -38,5 +39,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DiracUtils.initialize(context);
         DisplayUtils.enableService(context);
         PocketService.startService(context);
+
+        // Start VolumeListenerService on boot
+        context.startService(new Intent(context, VolumeListenerService.class));
     }
 }
